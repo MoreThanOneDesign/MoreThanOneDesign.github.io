@@ -397,12 +397,83 @@ p {
 /* ==========================
    11. CTA
 ========================== */
-
+#contact-cta {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    text-align: center;
+}
+#contact-cta .container {
+    max-width: 52rem;
+}
+#contact-cta .subtitle {
+    color: var(--surface-color);
+    opacity: 0.8;
+}
+#contact-cta h2 {
+    margin-bottom: 1.25rem;
+    color: var(--surface-color);
+}
+#contact-cta p:not(.subtitle) {
+    margin-bottom:m 2rem;
+    color: var(--surface-color);
+    opacity: 0.9;
+}
+#contact-cta .primary-btn {
+    margin-top: 1.5rem;
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+}
+#contact-cta .primary-btn:hover, #contact-cta .primary-btn:focus-visible {
+    background-color: var(--background-color);
+    color: var(--primary-hover);
+}
 
 /* ==========================
    12. FOOTER
 ========================== */
-
+.site-footer {
+    padding: 4rem 0 2rem;
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+.site-footer .container {
+    text-align: center;
+}
+.footer-brand a {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.footer-tagline {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+}
+.footer-links a {
+    color: var(---text-color);
+    font-weight: 500;
+    transition: color var(---transition);
+}
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    color: var(--primary-color);
+}
+.footer-copyright {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0;
+}
 
 /* ==========================
    13. RESPONSIVE
