@@ -541,6 +541,22 @@ p {
     color: var(--primary-hover);
 }
 
+#contact-hero h1 {
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+}
+
+#contact-hero .section-description {
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.contact-information h2 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(2.7rem, 5vw, 4rem);
+}
+
 
 /* ==========================
    13. FOOTER
@@ -788,9 +804,520 @@ p {
 .product-features li::marker {
     color: var(--primary-color);
 }
+/* Product features */
+
+#product-features-section {
+    background-color: var(--surface-color);
+    text-align: center;
+}
+#product-features-section h2 {
+    max-width: 42rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.product-feature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.product-feature-card {
+    padding: 2.5rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.product-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+.product-feature-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Product FAQ */
+
+#product-faq {
+    background-color: var(--background-color);
+}
+#product-faq .subtitle, #product-faq h2 {
+    text-align: center;
+}
+.faq-list {
+    max-width: 52rem;
+    margin: 3rem auto 0;
+}
+.faq-list details {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.faq-list summary {
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+.faq-list details p {
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+/* Related products */
+
+#related-products {
+    background-color: var(--surface-color);
+}
+#related-products .subtitle,
+#related-products h2 {
+    text-align: center;
+}
+#related-products .products {
+    margin-top: 4rem;
+}
 
 /* ==========================
-   16. RESPONSIVE
+   16. SERVICES PAGE
+========================== */
+
+/* Services hero */
+
+#services-hero {
+    background-color: var(--surface-color);
+    text-align: center;
+}
+#services-hero .container {
+    max-width: 52rem;
+}
+#services-hero h1 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(3.2rem, 7vw, 5.5rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+#services-hero .section-description {
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+/* Services overview */
+
+#services-overview {
+    background-color: var(--background-color);
+}
+.services-page-grid {
+    display: grid;
+    gap: 4rem;
+}
+.service-detail-card {
+    padding: 3rem;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.service-detail-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+.service-detail-card h2 {
+    margin-bottom: 1.5rem;
+}
+.service-detail-card > p:not(.subtitle) {
+    max-width: 46rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+.service-feature-list {
+    display: grid;
+    gap: 0.85rem;
+    padding-left: 1.25rem;
+    color: var(--text-light);
+}
+.service-feature-list li::marker {
+    color: var(--primary-color);
+}
+
+/* Process */
+
+#service-process {
+    background-color: var(--surface-color);
+}
+#service-process .subtitle, #service-process h2 {
+    text-align: center;
+}
+#service-process h2 {
+    max-width: 42rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.process-step {
+    padding: 2.25rem;   
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+}
+.process-number {
+    display: inline-blocks;
+    margin-bottom: 1.25rem;
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.process-step h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.45rem;
+}
+.process-step p {
+    line-height: 1.75;
+}
+
+/* ==========================
+   17. ABOUT PAGE
+========================== */
+
+/* Hero */
+#about-hero {
+    background: var(--surface-color);
+    text-align: center;
+}
+#about-hero .container {
+    max-width: 52rem;
+}
+#about-hero h1 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(3.2rem, 7vw, 5.5rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+#about-hero .section-description {
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+/*Our Story */
+
+#our-story {
+    background-color: var(--background-color);
+}
+#our-story .about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+}
+#our-story img {
+    width: 100%;
+    height: 38rem;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 45px rgba(0,0,0,.08);
+}
+#our-story .about-content p:not(.subtitle) {
+    margin-bottom: 1.5rem;
+}
+
+/* Mission & Vision */
+
+#mission-vision {
+    background-color: var(--surface-color);
+}
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.mission-card {
+    padding: 3rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    transition: transform var(--transition),
+    box-shadow var(--transition);
+}
+.mission-card h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Values */
+
+#our-values {
+    background-color: var(--background-color);
+    text-align: center;
+}
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.value-card {
+    padding: 2.5rem;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transform), 
+    box-shadow var(--transform);
+}
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.08);
+}
+.value-card h3 {
+    margin-bottom: 1rem;
+}
+
+/* Why Choose */
+
+#why-choose-us {
+    background-color: var(--surface-color);
+}
+.why-choose-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+.why-choose-list {
+    display: grid;
+    gap: 2rem;
+}
+.why-choose-list article {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.why-choose-list article:last-child {
+    border-bottom: none;
+}
+.why-choose-list h3 {
+    margin-bottom: .75rem;
+}
+
+/* Team */
+
+#team {
+    background-color: var(--background-color);
+    text-align: center;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.team-card {
+    padding: 2rem;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.team-card:hover {
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+.team-image {
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+}
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.team-role {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+
+/* ==========================
+   18. CONTACT PAGE
+========================== */
+
+/* Contact hero */
+
+#contact-hero {
+    background-color: var(--surface-color);
+    text-align: center;
+}
+
+#contact-hero .container {
+    max-width: 52rem;
+}
+
+#contact-hero h1 {
+     margin-bottom: 1.5rem;
+     font-size: clamp(3.5rem, 7vw, 5.5rem);
+     font-weight: 500;
+     line-height: 1.05;
+}
+
+#contact-hero .section-description {
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+/* Main contact section */
+
+#contact-section {
+    background-color: var(--background-color);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 5rem;
+}
+
+.contact-information h2 {
+    margin-bottom: grid;
+    font-size: clamo(2.7rem, 5vw, 4rem);
+}
+
+.contact-information > p:not(.subtitle) {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Contact detail cards */
+
+.contact-details {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.contact-detail-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.contact-detail-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+}
+
+.contact-detail-icon {
+    display: grid;
+    flex: 0 0 2.75rem;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    background-color: var(--background-color);
+    border-radius: 50%font-size 1.15rem;
+}
+
+.contact-detail-card h3 {
+    margin-bottom:0.35rem;
+    font-size: 1.15rem;
+}
+
+.contact-detail-card p {
+    line-height: 1.6;
+}
+
+.contact-detail-card a:hover, .contact-detail-card a:focus-visible {
+    color: var(--primary-color);
+}
+
+/* Contact form card */
+
+.contact-form {
+    padding: 3rem;
+    background-color: var(--surface-color);
+    border: 1 px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+}
+
+.contact-form-heading {
+    margin-bottom: 2.5rem;
+}
+
+.contact-form-heading h2 {
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+}
+
+.contact-form-heading > p:not(.subtitle) {
+    line-height: 1.8;
+}
+
+/* Form fields */
+
+.form-group {
+    display: grid;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.font-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 1rem 1.1rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition), var(--background-color) var(--transition);
+}
+
+.form-group textarea {
+    min-height: 12rem;
+    resize: vertical;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    background-color: var(--surface-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(200, 169, 106, 0.15);
+}
+
+.contact-form .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* Contact FAQ */
+
+#contact-faq {
+    background-color: var(--surface-color);
+}
+
+#contact0faq .subtitle, #contact-faq h2 {
+    text-align: center;
+}
+
+/* ==========================
+   19. RESPONSIVE
 ========================== */
 
 @media (max-width: 992px) {
@@ -859,6 +1386,26 @@ p {
 
     .product-gallery img {
         height: 30rem;
+    }
+    .product-feature-cards {
+        grid-template-columns: 1fr;
+    }
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .service-detail-card {
+        padding: 2.5rem;
+    }
+    .mission-grid, .team-grid, .values-grid, .why-choose-layout, #our-story .about-layout {
+        grid-template-columns: 1fr;
+    }
+    .team-image {
+        width: 160px;
+        height: 160px;
+    }
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap:3rem;
     }
 }
 
@@ -948,5 +1495,34 @@ p {
     .product-information .btn {
         width: 100%;
         text-align: center;
+    }
+    .service-detail-card {
+        padding: 2rem;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        padding: 2rem;
+    }
+    .mission-card, .value-card, .team-card {
+        padding: 2rem;
+    }
+    #about-hero h1 {
+        font-size: clamp(2.38rem, 12vw, 4rem);
+    }
+    #our-story img {
+        height: 22rem;
+    }
+    .contact-form {
+        padding: 2rem;
+    }
+    .contact-detail-card {
+        padding: 1.25rem;
+    }
+    #contact-hero h1 {
+        font-size: clamp(2.8rem, 12vw, 4rem);
     }
 }
